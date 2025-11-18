@@ -1,0 +1,18 @@
+.webheader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fbca1f;
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 3px solid black;
+    z-index: 1000;
+}
+
+.indiHeaderTitle {
+    font-size: 24px;
+    margin: 0;
+    font-weight: 900;
+    color: black;
+}

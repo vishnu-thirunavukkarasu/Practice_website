@@ -1,0 +1,50 @@
+package com.example.website.controller;
+
+import com.example.website.model.User;
+import com.example.website.repository.UserRepository;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Optional;
+
+@RestController
+@RequestMapping("/api/auth")
+@CrossOrigin(origins = "http://localhost:5173") // React frontend
+public class AuthController {
+
+    private final UserRepository userRepository;
+    private final BCryptPasswordEncoder passwordEncoder;
+
+    public AuthController(UserRepository userRepository) {
+        this.userRepository = userRepository;
+        this.passwordEncoder = new BCryptPasswordEncoder();
+    }
+
+    // ✅ Signup
+    @PostMapping("/signup")
+    public String registerUser(@RequestBody User user) {
+        if (userRepository.findByEmail(user.getEmail()).isPresent()) {
+            return "Error: Email already in use!";
+        }
+        // Encrypt password
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
+        userRepository.save(user);
+        return "User registered successfully!";
+    }
+
+    // ✅ Login
+    @PostMapping("/login")
+    public String loginUser(@RequestBody User loginUser) {
+        Optional<User> userOpt = userRepository.findByEmail(loginUser.getEmail());
+        if (userOpt.isPresent()) {
+            User user = userOpt.get();
+            if (passwordEncoder.matches(loginUser.getPassword(), user.getPassword())) {
+                return "Login successful!";
+            } else {
+                return "Error: Invalid password!";
+            }
+        } else {
+            return "Error: User not found!";
+        }
+    }
+}
