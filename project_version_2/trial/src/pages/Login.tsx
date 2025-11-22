@@ -23,27 +23,30 @@ const Login: React.FC = () => {
     };
 
     return (
-        <div style={{ maxWidth: "400px", margin: "auto", marginTop: "60px" }}>
+        <div className="login-container">
             <h2>Login</h2>
-            <form onSubmit={handleSubmit}>
-                <input
-                    type="email"
-                    placeholder="Email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                    style={{ display: "block", marginBottom: "10px", width: "100%" }}
-                />
-                <input
-                    type="password"
-                    placeholder="Password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                    style={{ display: "block", marginBottom: "10px", width: "100%" }}
-                />
-                <button type="submit">Login</button>
-            </form>
+            <div className="input-grp">
+                <form onSubmit={handleSubmit}>
+                    <input
+                        type="email"
+                        placeholder="Email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+
+                    />
+                    <input
+                        type="password"
+                        placeholder="Password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
+
+                    />
+                    <button className="loginsignupbtn" type="submit">Login</button>
+                    <button className="loginsignupbtn" type="button" onClick={() => navigate("/signup")}>Sign Up</button>
+                </form>
+            </div>
             {message && <p>{message}</p>}
         </div>
     );

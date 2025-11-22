@@ -294,13 +294,14 @@ input {
   box-sizing: border-box;
   outline: none;
   transition: all 0.3s;
+  margin-bottom: 10px;
 }
 
 input:focus {
   box-shadow: 4px 4px 0px #000000;
 }
 
-button {
+.loginsignupbtn {
   width: 50%;
   padding: 12px;
   background-color: #e0431f;
@@ -309,12 +310,12 @@ button {
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  margin-top: 100px;
+  margin-top: 50px;
   margin-left: 100px;
   transition: all 0.3s;
 }
 
-button:hover {
+.loginsignupbtn:hover {
   box-shadow: 4px 4px 0px #000000;
 
 }
@@ -329,7 +330,7 @@ button:hover {
     margin: 40px auto;
   }
 
-  button {
+  .loginsignupbtn {
     width: 80%;
     margin-top: 40px;
     margin-left: 10%;
@@ -352,7 +353,7 @@ button:hover {
     margin-bottom: 16px;
   }
 
-  button {
+  .loginsignupbtn {
     width: 100%;
     margin-top: 20px;
     margin-left: 0;
@@ -371,7 +372,7 @@ button:hover {
     padding: 8px;
   }
 
-  button {
+  .loginsignupbtn {
     font-size: 14px;
     padding: 10px;
   }
