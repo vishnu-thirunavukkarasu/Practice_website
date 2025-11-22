@@ -266,3 +266,55 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid #000000;
+  padding: 40px 30px;
+  background-color: #fbca1f;
+  box-shadow: 8px 8px 0px #000000;
+  position: relative;
+  border-radius: 12px;
+  margin: 60px auto;
+}
+
+.input-grp {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #000000;
+  border-radius: 6px;
+  font-size: 16px;
+  box-sizing: border-box;
+  outline: none;
+  transition: all 0.3s;
+}
+
+input:focus {
+  box-shadow: 4px 4px 0px #000000;
+}
+
+button {
+  width: 50%;
+  padding: 12px;
+  background-color: #e0431f;
+  color: #fff;
+  border: 2px solid #000000;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 100px;
+  margin-left: 100px;
+  transition: all 0.3s;
+}
+
+button:hover {
+  box-shadow: 4px 4px 0px #000000;
+
+}
