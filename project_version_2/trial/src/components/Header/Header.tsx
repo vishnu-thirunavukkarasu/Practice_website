@@ -1,4 +1,5 @@
 import './Header.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 interface HeaderProps {
     title: string;
@@ -7,6 +8,9 @@ interface HeaderProps {
 function Header({ title }: HeaderProps) {
     return (
         <header className="webheader">
+            <div>
+
+            </div>
             <p className="indiHeaderTitle">{title}</p>
         </header>
     );
