@@ -1,6 +1,6 @@
 import axios, { AxiosError } from "axios";
 
-const API_URL = "http://localhost:8080/api/auth";
+const API_URL = "https://practice-website-backend.onrender.com/api/auth";
 
 export const signupUser = async (user: { name: string; email: string; password: string }) => {
     try {
