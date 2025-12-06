@@ -9,7 +9,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/auth")
-@CrossOrigin(origins = "http://localhost:5173") // React frontend
+@CrossOrigin(origins = "*") // React frontend
 public class AuthController {
 
     private final UserRepository userRepository;
