@@ -22,36 +22,38 @@ const Signup: React.FC = () => {
     };
 
     return (
-        <div className="login-container">
-            <h2>Sign Up</h2>
-            <form onSubmit={handleSubmit}>
-                <input
-                    type="text"
-                    placeholder="Name"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    required
-                    style={{ display: "block", marginBottom: "10px", width: "100%" }}
-                />
-                <input
-                    type="email"
-                    placeholder="Email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                    style={{ display: "block", marginBottom: "10px", width: "100%" }}
-                />
-                <input
-                    type="password"
-                    placeholder="Password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                    style={{ display: "block", marginBottom: "10px", width: "100%" }}
-                />
-                <button className="loginsignupbtn" type="submit">Sign Up</button>
-            </form>
-            {message && <p>{message}</p>}
+        <div className="login-signup-page">
+            <div className="login-container">
+                <h2>Sign Up</h2>
+                <form onSubmit={handleSubmit}>
+                    <input
+                        type="text"
+                        placeholder="Name"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        required
+                        style={{ display: "block", marginBottom: "10px", width: "100%" }}
+                    />
+                    <input
+                        type="email"
+                        placeholder="Email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                        style={{ display: "block", marginBottom: "10px", width: "100%" }}
+                    />
+                    <input
+                        type="password"
+                        placeholder="Password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
+                        style={{ display: "block", marginBottom: "10px", width: "100%" }}
+                    />
+                    <button className="loginsignupbtn" type="submit">Sign Up</button>
+                </form>
+                {message && <p>{message}</p>}
+            </div>
         </div>
     );
 };
